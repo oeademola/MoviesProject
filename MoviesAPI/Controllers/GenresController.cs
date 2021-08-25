@@ -74,7 +74,8 @@ namespace MoviesAPI.Controllers
             if (!isExist)
                 return NotFound();
             _context.Genres.Remove(new Genre() {Id = id});
-            await _context.SaveChangesAsync(); 
+            await _context.SaveChangesAsync();
+            //returns nothing  
             return NoContent();
         }
 
